@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --body-color: hsl(30, 38%, 92%);
+    --mainheader-color: hsl(212, 21%, 14%);
+    --para-price-color: hsl(228, 12%, 48%);
+    --btn-color: hsl(158, 36%, 37%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--body-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    height: 60%;
+    border-radius: 16px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.left img{
+    width: 100%;
+    display: inherit;
+}
+
+.right {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right h5, .para, span{
+    color: var(--para-price-color);
+}
+
+.right h5 {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+h2 {
+    color: var(--mainheader-color);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1em;
+}
+
+.para {
+    color: var(--para-price-color);
+    line-height: 1.6;
+}
+
+.cost {
+    display: flex;
+    align-items: center;
+}
+
+.cost .current {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 32px;
+    color: var(--btn-color);
+    padding-right: 24px;
+}
+
+.cost span {
+    color: var(--para-price-color);
+    text-decoration: line-through;
+}
+
+button {
+    background-color: var(--btn-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 0;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+}
+
+button:hover {
+    background-color: hsl(158, 36%, 25%);
+    cursor: pointer;
+}
+
+button img {
+    padding-right: 8px;
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        margin: 16px auto;
+        padding: 0 16px;
+    }
+
+    .left img {
+        max-height: 290px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .right {
+        padding: 24px;
+    }
+    .right h5, .right h2, .right .para, .right .cost{
+        padding-bottom: 16px;
+    } 
+
+    h2, .current {
+        font-size: 28px;
+    }
+
+    .para {
+        font-size: 12px;
+    }
+    button {
+        padding: 12px 0;
+        font-size: 12px;
+    }
+}
